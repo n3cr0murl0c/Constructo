@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"emmet.includeLanguages": {
+			"django-html": "html",
+	   },
+
+	   "css": {
+			"style": [
+			"E:/Ventrue Technologies/Constructo/WebPage/static/css/style.css",
+			"bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap-grid.css",
+			"E:/Ventrue Technologies/Constructo/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap-grid.css.map",
+			"E:/Ventrue Technologies/Constructo/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap-grid.min.css",
+			"bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap-grid.min.css.map",
+			"bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.css"
+			],
+	  },
+	},
+}

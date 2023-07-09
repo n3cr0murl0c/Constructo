@@ -38,7 +38,7 @@ const Posts = (props) => {
                       <Container id='CardsWrapper' key={post.id}>
                         <Card >
                           <Button variant="" href={post.url}>
-                            <Card.Img variant="top" src='{post.img.url}' />
+                            <Card.Img variant="top" src={post.imagen_principal} />
                             <Card.Body>
                               {/* <Card.Title>{post.titulo}</Card.Title> */}
                               <Card.Text>

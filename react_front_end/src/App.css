@@ -1,0 +1,54 @@
+/*Custom Fonts*/
+
+@font-face {
+  font-family: Jost;
+  src: url('./assets/fonts/Jost-VariableFont_wght.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: Karla;
+  src: url('./assets/fonts/Karla-VariableFont_wght.ttf');
+  font-weight: 500;
+}
+
+/*Default CSS*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body{
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #FFFF !important;
+  color: #121212 !important;
+  font-family: 'Jost',sans-serif !important;
+}
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+.App {
+  text-align: center;
+}
+
+#banner-carousel{
+  width: 100vw;
+  height: 30vh;
+}
+
+div.carousel .carousel-item .carousel-caption .container .background{
+ 
+  /* backdrop-filter: blur(10p  x); */
+  background-color: rgb(0 0 0 / 0.2);
+  backdrop-filter: drop-shadow(4px 4px 10px rgb(0, 0, 0));
+}

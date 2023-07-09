@@ -1,0 +1,50 @@
+.preloader{
+    height: 100vh;
+    width: 100vw;
+    background: #000;
+    color:#FFF;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 8;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.preloader .texts-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 350px;
+    font-size: 20px;
+    font-weight: 800;
+    overflow: hidden;
+    color: #FFF;
+    > span{
+        padding-left: 15px;
+    }
+}
+@font-face {
+    font-family: 'bebas-neue';
+    src: url('./BebasNeue-Regular.ttf');
+    font-weight: 400;
+}
+.preloader .texts-container1 {/*Constructo Style*/
+    font-family: 'bebas-neue';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 350px;
+    font-size: 80px;
+    font-weight: 800;
+    overflow: hidden;
+    color: #FFF;
+    > span{
+        padding-left: 15px;
+    }
+}

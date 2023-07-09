@@ -1,0 +1,43 @@
+.stackering {
+    margin: 0;
+    padding: 0;
+    margin-top: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stackering .box{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 300px;
+    /* background-image: url('../NavBar/assets/img/Logo_final.png'); */
+    background-color: rgba(rgba(53, 163, 237, 0.345), green, blue, alpha);
+}
+.stackering .box .card{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+    height: inherit;
+    background-color: rgba(rgba(53, 163, 237, 0.345), green, blue, alpha);
+    
+}
+#CardsWrapper{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > .card{
+        /* display: block; */
+        margin-top: 104px;
+        /* box-shadow: 2px -1px 1.2px 2.3px rgba(45, 51, 43, 0.368); */
+    }
+}

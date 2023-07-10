@@ -1,0 +1,83 @@
+version: '3.4'
+
+services:
+  python:
+    image: msp_idf_v1.0
+    container_name: ConstructoWebsite
+    restart: unless-stopped
+    build:
+      context: ./BackEnd
+      dockerfile: ./BackEnd/Dockerfile
+    command: gunicorn IDS_APP.wsgi:application --bind 0.0.0.0:8091 --timeout 200 --workers=3 --reload
+    ports:
+      - 8091:8091
+    volumes:
+      - ./BackEnd:/usr/src/constructo
+      - static_data:/usr/src/constructo/staticfiles
+      - media_data:/usr/src/constructo/media
+    
+    networks:
+      backend:
+        
+      frontend:
+        ipv4_address: 192.168.1.91
+    
+
+    environment:
+      - DB_DATABASE = msp
+      - DB_USER = postgres
+      - DB_PASSWORD = @nDREE02019868251%
+      - DB_HOST = constructo_db
+      - DB_PORT = 5432
+
+    depends_on:
+      - constructo_db
+
+  constructo_db:
+    image: postgres:13.0-alpine
+    container_name: constructo_db
+    restart: unless-stopped
+    logging:
+          options:
+            max-size: 10m
+            max-file: "3"
+    volumes:
+    - postgres_data:/var/lib/postgresql/data/
+    # - ./test.sql:/docker-entrypoint-initdb.d/test.sql
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=@nDREE02019868251%
+      - POSTGRES_DB=constructo_db
+      
+      
+    networks:
+      - backend
+
+  react:
+    build: ./react_front_end
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend:/frontend
+
+      
+volumes:
+  postgres_data:
+
+  static_data:
+
+  media_data:
+
+networks:
+  backend:
+    name: Constructo_network
+    driver: bridge
+    # ipam:
+    #   config:
+    #     - subnet: 192.168.0.1/24
+    #       gateway: 192.168.0.1
+  frontend:
+    name: proxy
+    external: true
+
+      

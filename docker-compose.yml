@@ -20,7 +20,7 @@ services:
       backend:
         
       api:
-        ipv4_address: 192.168.12.3
+        # ipv4_address: 192.168.12.3
     
 
     environment:
@@ -64,7 +64,7 @@ services:
       - ./frontend:/frontend
     networks:
       api:
-        ipv4_address: 192.168.12.2
+        # ipv4_address: 192.168.12.2
 
       nginx_proxy:
         ipv4_address: 192.168.1.91
@@ -89,10 +89,10 @@ networks:
   api:
     name: constructo_api_network
     driver: bridge
-    ipam:
-     config:
-       - subnet: 192.168.12.1/16
-         gateway: 192.168.12.1
+    # ipam:
+    #  config:
+    #    - subnet: 192.168.12.1/16
+    #      gateway: 192.168.12.1
 
  
       

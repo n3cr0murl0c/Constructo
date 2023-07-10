@@ -67,7 +67,7 @@ services:
       api:
         # ipv4_address: 192.168.12.3
 
-      frontend:
+      proxy:
         ipv4_address: 192.168.1.91
 
 
@@ -83,15 +83,15 @@ networks:
     name: constructo_db_network
     driver: bridge
     
-  frontend:
+  proxy:
     name: proxy
     external: true
 
   api:
     name: constructo_api_network
     driver: bridge
-    ipam:
-      config:
-        - subnet: 192.168.12.1/24
-          gateway: 192.168.12.1
+    # ipam:
+    #   config:
+    #     - subnet: 192.168.12.1/24
+    #       gateway: 192.168.12.1
       

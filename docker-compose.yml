@@ -15,14 +15,16 @@ services:
       - ./BackEnd:/usr/src/constructo
       - static_data:/usr/src/constructo/staticfiles
       - media_data:/usr/src/constructo/media
-    
     networks:
+
       backend:
         
       api:
+        ipv4_address: 192.168.12.2
     
 
     environment:
+      - VIRTUAL_HOST=constructo
       - DB_DATABASE = msp
       - DB_USER = postgres
       - DB_PASSWORD = @nDREE02019868251%
@@ -63,6 +65,7 @@ services:
       - ./frontend:/frontend
     networks:
       api:
+        # ipv4_address: 192.168.12.3
 
       frontend:
         ipv4_address: 192.168.1.91
@@ -79,10 +82,7 @@ networks:
   backend:
     name: constructo_db_network
     driver: bridge
-    # ipam:
-    #   config:
-    #     - subnet: 192.168.0.1/24
-    #       gateway: 192.168.0.1
+    
   frontend:
     name: proxy
     external: true
@@ -90,4 +90,8 @@ networks:
   api:
     name: constructo_api_network
     driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.12.1/24
+          gateway: 192.168.12.1
       

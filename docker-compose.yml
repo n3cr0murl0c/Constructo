@@ -3,7 +3,7 @@ version: '3.4'
 services:
   python:
     image: msp_idf_v1.0
-    container_name: ConstructoWebsite
+    container_name: constructo_restfulapi
     restart: unless-stopped
     build:
       context: ./BackEnd
@@ -52,12 +52,11 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=@nDREE02019868251%
       - POSTGRES_DB=constructo_db
-      
-      
     networks:
       - backend
 
   react:
+    container_name: constructo_frontend
     build: ./react_front_end
     ports:
       - 3000:3000
@@ -90,8 +89,5 @@ networks:
   api:
     name: constructo_api_network
     driver: bridge
-    # ipam:
-    #   config:
-    #     - subnet: 192.168.12.1/24
-    #       gateway: 192.168.12.1
+ 
       

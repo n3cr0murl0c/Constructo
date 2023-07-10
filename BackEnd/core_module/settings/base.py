@@ -164,4 +164,5 @@ DATE_INPUT_FORMATS = ['%d/%m/%Y']
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "http://*.v3ntrue.xyz"
 ]

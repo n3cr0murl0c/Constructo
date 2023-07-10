@@ -66,7 +66,7 @@ services:
       api:
         # ipv4_address: 192.168.12.3
 
-      proxy:
+      nginx_proxy:
         ipv4_address: 192.168.1.91
 
 
@@ -82,7 +82,7 @@ networks:
     name: constructo_db_network
     driver: bridge
     
-  proxy:
+  nginx_proxy:
     name: proxy
     external: true
 

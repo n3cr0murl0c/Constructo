@@ -8,7 +8,7 @@ services:
     build:
       context: ./BackEnd
       dockerfile: ./Dockerfile
-    command: gunicorn IDS_APP.wsgi:application --bind 0.0.0.0:8091 --timeout 200 --workers=3 --reload
+    command: gunicorn core_module.wsgi:application --bind 0.0.0.0:8091 --timeout 200 --workers=3 --reload
     ports:
       - 8091:8091
     volumes:

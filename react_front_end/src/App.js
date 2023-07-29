@@ -41,7 +41,7 @@ function App() {
 
   useEffect(()=>{
     setAppState({ loading: true});
-    const apiURL = 'http://172.20.0.3:8091';
+    const apiURL = 'http://constructo_db:8000/api';
     fetch(apiURL)
         .then((data) => data.json())
         .then((posts)=> {

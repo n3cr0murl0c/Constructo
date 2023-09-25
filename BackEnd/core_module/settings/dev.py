@@ -6,8 +6,8 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
         "NAME": "constructo_db",
         "USER": "postgres",
-        "PASSWORD":"@nDREE1%",
-        "HOST": "msp_db.v3ntrue.xyz",
+        "PASSWORD":"ch@nge_me_pls",
+        "HOST": "db.host.changeme.pls",
         "PORT":  "5432",
     },
     

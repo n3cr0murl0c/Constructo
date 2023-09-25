@@ -24,10 +24,10 @@ services:
     
 
     environment:
-      - VIRTUAL_HOST=constructo
-      - DB_DATABASE = msp
+      - VIRTUAL_HOST= constructo
+      - DB_DATABASE = constructodB
       - DB_USER = postgres
-      - DB_PASSWORD = @nDREE02019868251%
+      - DB_PASSWORD = ch@nge_me_pls
       - DB_HOST = constructo_db
       - DB_PORT = 5432
 
@@ -50,7 +50,7 @@ services:
     # - ./test.sql:/docker-entrypoint-initdb.d/test.sql
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=@nDREE02019868251%
+      - POSTGRES_PASSWORD=ch@nge_me_pls
       - POSTGRES_DB=constructo_db
     networks:
       - backend
